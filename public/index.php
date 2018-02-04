@@ -8,6 +8,8 @@ if (PHP_SAPI === 'cli-server' && $_SERVER['SCRIPT_FILENAME'] !== __FILE__) {
 chdir(dirname(__DIR__));
 require 'vendor/autoload.php';
 
+define('APPLICATION_PATH', dirname(__FILE__));
+
 /**
  * Self-called anonymous function that creates its own scope and keep the global namespace clean.
  */

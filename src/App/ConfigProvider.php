@@ -3,9 +3,7 @@
 namespace App;
 
 /**
- * The configuration provider for the App module
- *
- * @see https://docs.zendframework.com/zend-component-installer/
+ * Returns this app configuration
  */
 class ConfigProvider
 {
@@ -33,11 +31,9 @@ class ConfigProvider
     public function getDependencies()
     {
         return [
-            'invokables' => [
-                Action\PingAction::class => Action\PingAction::class,
-            ],
             'factories'  => [
-                Action\HomePageAction::class => Action\HomePageFactory::class,
+                Action\HomePageAction::class => Action\Factory\HomePageFactory::class,
+                Action\PdfPageAction::class => Action\Factory\PdfPageFactory::class,
             ],
         ];
     }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>{% block title %}{% endblock %} - zend-expressive</title>
+    <title>{% block title %}{% endblock %} - Generador</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
@@ -12,7 +12,6 @@
         .app { display: flex; min-height: 100vh; flex-direction: column; }
         .app-content { flex: 1; }
         .app-footer { padding-bottom: 1em; }
-        .zf-green, h2 a { color: #68b604; }
     </style>
     {% block stylesheets %}{% endblock %}
 </head>
@@ -27,27 +26,8 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="{{ path('home') }}">
-                        <img src="{{ asset('zf-logo.png') }}" alt="Zend Expressive" />
+                        Inicio
                     </a>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a href="https://docs.zendframework.com/zend-expressive/" target="_blank">
-                                <i class="fa fa-book"></i> Docs
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/zendframework/zend-expressive" target="_blank">
-                                <i class="fa fa-wrench"></i> Contribute
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ path('api.ping') }}">
-                                Ping Test
-                            </a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </nav>
@@ -64,7 +44,7 @@
             <hr />
             {% block footer %}
                 <p>
-                    &copy; 2005 - {{ "now"|date("Y") }} by Zend Technologies Ltd. All rights reserved.
+                    &copy; 2005 - {{ "now"|date("Y") }} PDF Demo
                 </p>
             {% endblock %}
         </div>
